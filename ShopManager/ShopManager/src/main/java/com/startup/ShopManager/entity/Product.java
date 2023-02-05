@@ -2,6 +2,7 @@ package com.startup.ShopManager.entity;
 
 import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
+import com.startup.ShopManager.DTO.ProductDTO;
 import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
@@ -62,6 +63,12 @@ public class Product {
         this.firstDate = firstDate;
         this.count = count;
         this.introduce = introduce;
+    }
+    public Product(ProductDTO productDTO){
+        this.productName = productDTO.getProductName();
+        this.firstDate = LocalDate.now();
+        this.count = productDTO.getPrice();
+        this.introduce = productDTO.getIntroduce();
     }
 
 

@@ -46,4 +46,12 @@ public class UserDeital {
     @OneToOne(mappedBy = "userDeital")
     @JsonBackReference
     private User user;
+
+    public UserDeital(String firstName, String lastName, String adress, String email, String phone){
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.adress = adress;
+        this.email = email;
+        this.phone = phone;
+    }
 }

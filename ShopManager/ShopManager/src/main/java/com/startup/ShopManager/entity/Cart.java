@@ -31,4 +31,8 @@ public class Cart {
     @JsonManagedReference
     private List<Product> products;
     private String total;
+    public Cart(String total){
+        this.total = total; // khởi tạo giỏ hàng với tổng tiền = total;
+
+    }
 }
